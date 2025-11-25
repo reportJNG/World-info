@@ -1,0 +1,106 @@
+@import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
+
+/* FIXED LEFT SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 240px;
+  padding: 12px;
+  z-index: 2000;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* TOGGLE BUTTON */
+.toggleBtn {
+  width: fit-content;
+  padding: 12px 14px;
+  border-radius: 14px;
+
+  background: rgba(var(--text-rgb), 0.08);
+  border: 1px solid rgba(var(--text-rgb), 0.15);
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.toggleBtn:hover {
+  background: rgba(var(--text-rgb), 0.18);
+  transform: scale(1.05);
+}
+
+.toggleBtn i {
+  font-size: 22px;
+  color: var(--text);
+}
+
+/* WHEN OPEN */
+.toggleOpen {
+  background: rgba(var(--text-rgb), 0.2);
+  border-color: rgba(var(--text-rgb), 0.3);
+}
+
+/* DROPDOWN AREA */
+.dropdown {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+
+  padding: 0;
+  border-radius: 18px;
+
+  background: rgba(var(--text-rgb), 0.06);
+  border: 1px solid rgba(var(--text-rgb), 0.1);
+
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 22px rgba(var(--text-rgb), 0.2);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  transition: max-height 0.35s ease;
+}
+
+/* OPEN ANIMATION */
+.dropdownOpen {
+  max-height: 420px;
+  padding: 14px;
+  overflow-y: auto;
+}
+
+/* COUNTRY BUTTON */
+.countryBtn {
+  width: 100%;
+  padding: 10px 14px;
+
+  background: rgba(var(--text-rgb), 0.08);
+  border: 1px solid rgba(var(--text-rgb), 0.1);
+  border-radius: 12px;
+
+  color: var(--text);
+  text-align: left;
+  font-size: 15px;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.countryBtn:hover {
+  background: rgba(var(--text-rgb), 0.2);
+  border-color: rgba(var(--text-rgb), 0.25);
+  transform: translateX(4px);
+}
+
+/* Scrollbar */
+.dropdownOpen::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdownOpen::-webkit-scrollbar-thumb {
+  background: rgba(var(--text-rgb), 0.3);
+  border-radius: 20px;
+}
